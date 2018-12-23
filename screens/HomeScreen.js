@@ -1,7 +1,7 @@
 import React from 'react';
-import {StyleSheet, Text, View, SafeAreaView, TouchableOpacity,Button} from 'react-native';
+import {StyleSheet, Text, View, SafeAreaView, TouchableOpacity, Button} from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
-import {DrawerActions }from 'react-navigation-drawer';
+import {DrawerActions} from 'react-navigation-drawer';
 
 export default class HomeScreen extends React.Component {
     static navigationOptions = {
@@ -17,28 +17,16 @@ export default class HomeScreen extends React.Component {
 
     render() {
         return (
-            <View>
-                {/*<View style={styles.container}>*/}
-                    {/*<SafeAreaView style={{backgroundColor: '#eee', height: 200}}>*/}
-
-                        {/*<Icon name='ios-menu'*/}
-                              {/*size={30}*/}
-                              {/*style={{padding: 10}}*/}
-                              {/*onPress={() => this.props.navigation.openDrawer()}*/}
-                        {/*/>*/}
-
-
-                    {/*</SafeAreaView>*/}
-                {/*</View>*/}
-                <View style={{height: 200, justifyContent: 'center', alignItems: 'center'}}>
-                    <Text> Homeski</Text>
+            <SafeAreaView>
+                <View style={{height: 200}}>
                     <Icon name='ios-menu'
                           size={30}
                           style={{padding: 10}}
                           onPress={() => this.props.navigation.openDrawer()}
                     />
                 </View>
-            </View>
+            </SafeAreaView>
+
         );
     }
 }
